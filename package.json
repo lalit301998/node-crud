@@ -1,0 +1,36 @@
+{
+  "name": "sqlizer-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "https": "^1.0.0",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "query-string": "^7.0.0",
+    "read-excel-file": "^5.1.0",
+    "redis": "^3.0.2",
+    "sequelize": "^6.5.0",
+    "sweetalert": "^2.1.2",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

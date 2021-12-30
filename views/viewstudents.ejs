@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header.ejs')%>
+</head>
+<body>
+<div class="container">
+    <table class="table table-responsive table-dark" id="tableData">
+        <thead>
+          <tr>
+              <td>Id</td>
+              <td>Name</td>
+              <td>Father Name</td>
+              <td>Mother Name</td>
+              <td>Address</td>
+              <td>Mobile</td>
+              <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+            
+            <% data.forEach(function(data) { %>
+              <tr>
+                  <td><%= data.id %></td>
+                  <td><%= data.stu_name %></td>
+                  <td><%= data.father_name %></td>
+                  <td><%= data.mother_name %></td>
+                  <td><%= data.address %></td>
+               <td> <%= data.mobile %></td>
+               <td><a href="/editStu/<%= data.id %>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                <a href="" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
+               
+              </tr>
+                   
+              <% }); %>
+        </tbody>
+      
+       </table>  
+</div> 
+
+ <%- include('partials/footer.ejs')%>
+
+
+
+
+ <!-- <script>
+     $(document).ready(() => {
+
+$.ajax({
+    url: "/students", 
+    method: 'GET',
+    success: function(response){
+        var list = JSON.parse(response);
+                var tr = "";
+                $.each(list, function(i, v) {
+
+
+                    })
+        
+
+        
+    }
+})
+})
+
+ </script> -->
+</body>
+</html>

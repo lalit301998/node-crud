@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Student</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	<form method="post" action="http://localhost:8124/Add-Students">
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h3>Add Students</h3></div>
+     <div class="panel panel-body">
+				<div class="row">
+						<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" name="stu_name" class="form-control" placeholder="Enter Student Name">
+						
+						</div>
+					</div>	
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" name="fname" class="form-control" placeholder="Enter Father Name">
+						
+						</div>
+					</div>	
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" name="mname" class="form-control" placeholder="Enter Mother Name">
+						
+						</div>
+					</div>	
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" name="mobile" class="form-control" placeholder="Enter Mobile Number">
+						
+						</div>
+					</div>	
+					<div class="col-md-12">
+						<div class="form-group">
+							<textarea class="form-control" placeholder="Address" name="Address"></textarea>
+						
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="panel panel-footer">
+				<button type="submit" name="Save" class="btn btn-success">Save</button>
+			</div>
+    </div>
+
+  </div>
+  </form>
+
+</div>
+
+</body>
+</html>

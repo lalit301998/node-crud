@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="#" id="stuAdd">
+      <div class="panel-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading"><h3>Add Students</h3></div>
+         <div class="panel panel-body">
+                    <div class="row">
+                            <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="stu_name" class="form-control" placeholder="Enter Student Name">
+                            
+                            </div>
+                        </div>	
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="father_name" class="form-control" placeholder="Enter Father Name">
+                            
+                            </div>
+                        </div>	
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="mother_name" class="form-control" placeholder="Enter Mother Name">
+                            
+                            </div>
+                        </div>	
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="mobile" class="form-control" placeholder="Enter Mobile Number">
+                            
+                            </div>
+                        </div>	
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Address" name="address"></textarea>
+                            
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="panel panel-footer">
+                    <input type="submit" name="Save" class="btn btn-success" value="Save">
+                </div>
+        </div>
+    
+      </div>
+      </form>
+    
+    </div>
+    <div class="container">
+        <form action="/addFile" method="POST">
+            <input type="text" name="filename" placeholder="Enter File name" class="form-control">
+            <input type="submit" value="Create File">
+        </form>
+    </div>
+
+        <%- include('partials/footer.ejs')%>
+        <script>
+
+            //import JQuery from script
+            //import swal script
+            
+            $("#stuAdd").on("submit", function(e,res){
+            var formData = $("#stuAdd").serialize();
+            e.preventDefault();
+            e.preventDefault();
+            $.ajax({
+            url: "/Add-Students",
+            method: "post",
+            data:formData,
+            success:function(res){
+                if(res.status){
+                    swal({
+                        title: "Saved",
+                        text: res.message, 
+                        icon: "success",
+                        button: "Okay",
+                        
+                        }).then(()=>{
+                            location.reload();
+                        })
+                        
+                        
+                }
+            }
+            })
+            })
+
+            </script>
+</body>
+</html>
